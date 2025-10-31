@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #F1F5F9;
+    height: 100dvh;
+    width: 100%;
+    margin: 0;
+
+    color: #1B5E20;
+}
+
+.button-light{
+    font-size: 1rem;
+    background-color: #C8E6C9;
+    border: 0.5px solid #1B5E20;
+    padding: 4px 13px;
+    border-radius: 30px;
+
+    color: #1B5E20;
+}
+
+.button-modal-action{
+    border-radius: 7px;
+    border: none;
+    padding:  7px 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease ;
+    outline: none;
+    
+
+    color: #fff;
+}
+
+.button-modal-action--red {
+
+    background-color: #AE0000 ;
+    &:hover{
+        background-color: #af3c3c;
+    }
+
+}
+
+
+.button-modal-action--elverde{
+
+    background-color: #2E7D32;
+    &:hover{
+        background-color: #527a54;
+    }
+
+}
+
+.button-modal-action--gray{
+
+    background-color: #8C8C8C;
+    &:hover{
+        background-color: #afafaf;
+    }
+}
+
