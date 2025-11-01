@@ -1,12 +1,7 @@
 <div class="my-project-container">
   <!-- Breadcrumb -->
   <div class="breadcrumb">
-    <svg class="breadcrumb-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-    </svg>
-    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M9.29 6.71a.996.996 0 0 0 0 1.41L13.17 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/>
-    </svg>
+    <span class="breadcrumb-arrow">></span>
     <span class="breadcrumb-text">Mis proyectos</span>
   </div>
 
@@ -14,7 +9,7 @@
   <div class="section-header">
     <h2 class="section-title">Todos los proyectos</h2>
     <button class="button-add" (click)="addProject()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
         <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
       </svg>
       Añadir proyecto
@@ -30,19 +25,21 @@
       [class.project-card--finished]="project.status === 'Terminado'"
       (click)="openProject(project.id)">
       
-      <div class="project-card-header">
-        <h3 class="project-name">{{ project.name }}</h3>
-        <button class="menu-button" (click)="openMenu(project.id, $event)">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2z"/>
-          </svg>
-        </button>
-      </div>
+      <div class="project-card-content">
+        <div class="project-card-header">
+          <h3 class="project-name">{{ project.name }}</h3>
+          <button class="menu-button" (click)="openMenu(project.id, $event)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2z"/>
+            </svg>
+          </button>
+        </div>
 
-      <p class="project-zones">{{ project.zones }} zonas de estudio</p>
+        <p class="project-zones">{{ project.zones }} zonas de estudio</p>
 
-      <div class="project-footer">
-        <span class="project-status">{{ project.status }}</span>
+        <div class="project-footer">
+          <span class="project-status">{{ project.status }}</span>
+        </div>
       </div>
     </div>
   </div>

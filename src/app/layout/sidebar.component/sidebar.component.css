@@ -28,6 +28,11 @@ aside button:hover {
   background-color: #5c8301;
 }
 
+aside button.icon-selected {
+  background-color: #2E7D32;
+  border-color: #2E7D32;
+}
+
 aside button svg,
 aside button img {
   width: 26px;              
@@ -42,7 +47,6 @@ aside button img {
   align-items: center;
 }
 
-.icon-sidebar{
-
+.icon-sidebar {
   color: #fff;
 }

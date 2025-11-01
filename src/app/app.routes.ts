@@ -10,12 +10,15 @@ export const routes: Routes = [
     {
     path: 'app',
     component: MainLayoutComponent,
-    children: [
-        {
-            path: 'home',
-            loadComponent: () => import('./features/home/home.module').then(m => m.HomeModule)
-        }
-    ]
+     children: [
+            {
+                path: 'home',
+                loadComponent: () => import('./features/home/home.module').then(m => m.HomeModule)
+            },
+            {
+                path: 'my-project',
+                loadComponent: () => import('./features/my-project/my-project.module').then(m => m.MyProjectModule)
+            }
+        ]
     }
-
-    ];
+];
