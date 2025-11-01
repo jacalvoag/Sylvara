@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { MainLayoutComponent } from './layout/main-layout.component/main-layout.component';
+import { Title } from '@angular/platform-browser';
 
 export const routes: Routes = [
 
@@ -10,14 +11,19 @@ export const routes: Routes = [
     {
     path: 'app',
     component: MainLayoutComponent,
-     children: [
+        children: [
             {
                 path: 'home',
-                loadComponent: () => import('./features/home/home.module').then(m => m.HomeModule)
+                loadComponent: () => import('./features/home/home.module')
+                .then(m => m.HomeModule), data: {title: 'Home'}
             },
             {
                 path: 'my-project',
-                loadComponent: () => import('./features/my-project/my-project.module').then(m => m.MyProjectModule)
+                loadComponent: () => import('./features/my-project/my-project.module')
+                .then(m => m.MyProjectModule), data: {title: 'Mis proyectos'}
+            },
+            {
+                path: '', redirectTo: 'home', pathMatch: 'full'
             }
         ]
     }
