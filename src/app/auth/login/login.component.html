@@ -1,0 +1,39 @@
+<main class="login-main">
+
+    <div class="login-container">
+        <section class="login-section">
+            <div class="welcome">
+                <h1 class="logo">SYLVARA</h1>
+                <h2>¡BIENVENIDO DE VUELTA!</h2>
+                <p>Estamos Felices De Verte Nuevamente</p>
+                
+
+            </div>
+
+            <form [formGroup]="loginForm" (submit)="handleSubmit()"> 
+                <fieldset>
+                    <input id="email" formControlName="email" type="text" placeholder="Ingresa tu correo electronico" >
+                </fieldset>
+
+                <fieldset>
+                    <input id="password" formControlName="password" type="text" placeholder="Ingresa tu contraseña">
+                </fieldset>
+
+                <button>Iniciar sesión</button>
+            </form>
+
+
+
+        </section>
+
+        <section class="image-login-section">
+
+            <img class="image-login" src="https://www.shutterstock.com/image-photo/rows-carrot-daucus-carota-plants-600nw-2593335025.jpg" alt="">
+
+        </section>
+
+    </div>
+
+
+
+</main>
