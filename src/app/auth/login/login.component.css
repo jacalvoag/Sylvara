@@ -5,6 +5,7 @@
     padding: 20px 60px;
     width: 100%;
     max-width: 100%;
+    flex: 0 0 35%;
 
     color: #000;
 
@@ -13,6 +14,8 @@
 .logo{
     font-family: 'socrates';
     text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
 
     color: #0E3520;
 }
@@ -36,23 +39,85 @@
 
     display: flex;
     border-radius: 20px;
-    box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.15);
+    height: calc(100dvh - 40px);
+
 
     background-color: white;
 
 }
 
 .image-login-section{
-
-    width: 3fr;
-
+    display: flex;
+    flex: 0 0 65%;
 }
 
 .image-login{
 
     height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.remember-group{
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.8rem;
+    position: relative;
+    align-items: center;
+
+    color: #7C7C7C;
 
 
 }
 
+.remember-group input {
 
+    accent-color: #2B6B48;
+    vertical-align: middle;
+    position: relative;
+    bottom: 2px;
+
+}
+
+.remember-group a {
+
+    text-decoration: none;
+    color: #0E3520;
+
+
+}
+
+.login-main label {
+    display: flex;             
+    align-items: center;       
+    line-height: 1;             
+    margin-bottom: 4px;
+    display: inline;        
+}
+
+.login-main input {
+    display: inline;
+}
+
+.register-link { 
+
+
+
+    font-size: 0.8rem;
+
+    & a{
+        text-decoration: none;
+        color: #0E3520;
+    }
+
+    & span{
+        color: #7C7C7C;
+    }
+
+}
