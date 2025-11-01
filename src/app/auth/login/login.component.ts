@@ -8,7 +8,7 @@ import { FormControl, ReactiveFormsModule, FormBuilder, FormGroup, Validators } 
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class Login {
+export class LoginComponent {
 
   loginForm: FormGroup;
   email: FormControl;

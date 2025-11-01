@@ -87,3 +87,42 @@ app-root {
     }
 }
 
+.fieldset{
+
+    border: none;
+    width: 100%;
+
+}
+
+.input{
+
+    border-radius: 35px;
+    border-color: #7C7C7C;
+    border: 1px solid #7C7C7C;
+    padding: 12px 15px;
+    outline: none;
+    width: 100%;
+
+}
+
+.button-login-register{
+    color: white;
+    border-radius: 35px;
+    padding: 12px 15px;
+    border: none;
+    width: 70%;
+    justify-content: center;
+
+    background-color: #0E3520;
+    &:hover{
+        background-color: #3a5d4b;
+    }
+}
+
+.form{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

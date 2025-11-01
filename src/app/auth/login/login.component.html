@@ -10,16 +10,15 @@
 
             </div>
 
-            <form [formGroup]="loginForm" (submit)="handleSubmit()"> 
-                <fieldset>
-                    <input id="email" formControlName="email" type="text" placeholder="Ingresa tu correo electronico" >
-                </fieldset>
+            <form [formGroup]="loginForm" (submit)="handleSubmit() " class="form"> 
+    
+                <input id="email" class="input" formControlName="email" type="text" placeholder="Ingresa tu correo electronico" >
 
-                <fieldset>
-                    <input id="password" formControlName="password" type="text" placeholder="Ingresa tu contraseña">
-                </fieldset>
+                
+                <input id="password" class="input" formControlName="password" type="text" placeholder="Ingresa tu contraseña">
+                
 
-                <button>Iniciar sesión</button>
+                <button class="button-login-register">Iniciar sesión</button>
             </form>
 
 
