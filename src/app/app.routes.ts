@@ -16,11 +16,31 @@ export const routes: Routes = [
                 loadComponent: () => import('./features/home/home.module')
                 .then(m => m.HomeModule), data: {title: 'Home'}
             },
+
             {
                 path: 'my-project',
                 loadComponent: () => import('./features/my-project/my-project.module')
                 .then(m => m.MyProjectModule), data: {title: 'Mis proyectos'}
             },
+
+            {
+                path: 'team-projects',
+                loadComponent: () => import('./features/team-projects/team-projects.module')
+                .then(m => m.TeamProjectsModule), data: {title: 'Colaboraciones'}
+            },
+
+            {
+                path: 'reports',
+                loadComponent: () => import('./features/reports/reports.module')
+                .then(m => m.ReportsModule), data: {title: 'Reportes'}
+            },
+
+            {
+                path: 'configuration',
+                loadComponent: () => import('./features/configuration/configuration.module')
+                .then(m => m.ConfigurationModule), data: {title: 'Configuración'}
+            },
+
             {
                 path: '', redirectTo: 'home', pathMatch: 'full'
             }
