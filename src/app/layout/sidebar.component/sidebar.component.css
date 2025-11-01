@@ -1,0 +1,51 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #E2E8F0;
+  border-radius: 8px;
+}
+
+/* Botones del sidebar */
+aside button {
+  background-color: #6a994e;
+  border: 1px solid #6a994e;
+  border-radius: 8px;
+  width: 45px;               /* tamaño fijo para todos los botones */
+  height: 45px;
+  display: flex;             /* centra el contenido */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+aside button:hover {
+  background-color: #5c8301;
+}
+
+/* Íconos (SVG e imágenes) dentro de botones */
+aside button svg,
+aside button img {
+  width: 26px;               /* tamaño uniforme */
+  height: 26px;
+  display: block;
+}
+
+.section-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.icon-sidebar{
+
+
+  color: #fff;
+}

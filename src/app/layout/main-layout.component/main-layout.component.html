@@ -1,0 +1,13 @@
+<main class="main-layout" [class.sidebar-collapsed]="collapsed$">
+  <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+  </div>
+  
+  <div class="hearder-container">
+    <app-header></app-header>
+  </div>
+  
+  <div class="main-container">
+    <router-outlet></router-outlet>
+  </div>
+</main>

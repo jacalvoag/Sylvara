@@ -4,21 +4,33 @@
         <section class="login-section">
             <div class="welcome">
                 <h1 class="logo">SYLVARA</h1>
-                <h2>¡BIENVENIDO DE VUELTA!</h2>
-                <p>Estamos Felices De Verte Nuevamente</p>
+                <h2>¡CREA TU CUENTA!</h2>
+                <p>Comienza tu experiencia con nosotros hoy mismo</p>
                 
 
             </div>
 
             <form [formGroup]="loginForm" (submit)="handleSubmit() " class="form"> 
+
+                
     
-                <input id="email" class="input" formControlName="email" type="text" placeholder="Ingresa tu correo electronico" >
+                <input id="email" class="input" formControlName="email" type="email" placeholder="Ingresa tu correo electronico" >
+                
+                <input id="password" class="input" formControlName="password" type="password" placeholder="Ingresa tu contraseña">
+
+                <input id="password" class="input" formControlName="password" type="password" placeholder="Confirma tu contraseña">
+
+
+                <input id="name" class="input" formControlName="name" type="text" placeholder="Ingresa tu nombre">
+                
+                <input id="lastName" class="input" formControlName="lastName" type="text" placeholder="Ingresa tus apellidos">
+
+
+                <input id="date" class="input" formControlName="birthDate" type="date" placeholder="Ingresa tu fecha de nacimiento">
 
                 
-                <input id="password" class="input" formControlName="password" type="text" placeholder="Ingresa tu contraseña">
-                
 
-                <button class="button-login-register">Iniciar sesión</button>
+                <button class="button-login-register">Crear cuenta</button>
             </form>
 
 
