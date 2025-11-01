@@ -8,12 +8,12 @@ export const routes: Routes = [
     { path: 'login', loadComponent: () => import ('./auth/login/login.component').then(m => m.LoginComponent)},
     { path: 'register', loadComponent: () => import ('./auth/register/register.component').then(m => m.RegisterComponent)},
     {
-    path: '',
+    path: 'app',
     component: MainLayoutComponent,
     children: [
         {
             path: 'home',
-            loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
+            loadComponent: () => import('./features/home/home.module').then(m => m.HomeModule)
         }
     ]
     }
