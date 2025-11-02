@@ -1,12 +1,15 @@
-// src/app/features/home/home.component.ts
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Project } from '../../core/models/project.model';
 import { ProjectService } from '../../core/services/project.service';
+import { ActiveProjectsComponent } from './components/active-projects.component/active-projects.component';
+import { GeneralInfoComponent } from './components/general-info.component/general-info.component';
+import { NotificationsComponent } from './components/notifications.component/notifications.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, ActiveProjectsComponent, GeneralInfoComponent, NotificationsComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
