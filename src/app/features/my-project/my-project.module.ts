@@ -10,17 +10,17 @@ interface Project {
 
 @Component({
   selector: 'app-my-project',
-  imports: [CommonModule],
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './my-project.module.html',
-  styleUrls: ['./my-project.module.css']
+  styleUrl: './my-project.module.css'
 })
 export class MyProjectModule {
   projects: Project[] = [
     { id: 1, name: 'Rancho Cuba Libre', zones: 4, status: 'Activo' },
-    { id: 2, name: 'Rancho Cuba Libre', zones: 4, status: 'Activo' },
-    { id: 3, name: 'Rancho Cuba Libre', zones: 4, status: 'Activo' },
-    { id: 4, name: 'Rancho Cuba Libre', zones: 4, status: 'Terminado' }
+    { id: 2, name: 'Rancho El Paraíso', zones: 3, status: 'Activo' },
+    { id: 3, name: 'Finca Los Pinos', zones: 5, status: 'Activo' },
+    { id: 4, name: 'Hacienda San José', zones: 2, status: 'Terminado' }
   ];
 
   addProject(): void {

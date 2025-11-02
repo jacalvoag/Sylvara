@@ -1,10 +1,9 @@
 .my-project-container {
-  padding: 30px 40px;
+  padding: 60px 40px 30px 40px;
   width: 100%;
   height: 100%;
 }
 
-/* Breadcrumb */
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -15,19 +14,14 @@
   font-size: 1rem;
 }
 
-.breadcrumb-icon {
+.breadcrumb-arrow {
   color: #2E7D32;
-}
-
-.arrow-icon {
-  color: #666;
 }
 
 .breadcrumb-text {
   color: #2E7D32;
 }
 
-/* Section Header */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -68,7 +62,6 @@
   height: 20px;
 }
 
-/* Projects Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -76,14 +69,13 @@
   margin-top: 20px;
 }
 
-/* Project Card Base */
 .project-card {
   background-color: white;
   border-radius: 12px;
   padding: 20px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 3px solid;
+  border: 3px solid #E0E0E0;
   position: relative;
 }
 
@@ -92,19 +84,21 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Active Project Card */
 .project-card--active {
   border-color: #6a994e;
   background-color: #f4f9f0;
 }
 
-/* Finished Project Card */
 .project-card--finished {
   border-color: #8B6914;
   background-color: #FFF8E7;
 }
 
-/* Card Header */
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .project-card-header {
   display: flex;
   justify-content: space-between;
@@ -142,14 +136,12 @@
   height: 24px;
 }
 
-/* Project Zones */
 .project-zones {
   font-size: 0.9rem;
   color: #666;
   margin: 8px 0 15px 0;
 }
 
-/* Project Footer */
 .project-footer {
   display: flex;
   justify-content: flex-end;
@@ -173,7 +165,6 @@
   background-color: #FFE4A8;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .my-project-container {
     padding: 20px;
