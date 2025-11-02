@@ -18,13 +18,10 @@ header{
     font-size: 0.9rem;
 
 
-<<<<<<< HEAD
-=======
     padding: 2px 10px;
     background-color: #3B7F23; 
     border-radius: 10px;
     font-weight: 500;
->>>>>>> 0dc6bda649942b1cb9be77ea23305812c2efaefd
     color: #fff;
 
     & p{
