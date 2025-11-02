@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
 import { MainLayoutComponent } from './layout/main-layout.component/main-layout.component';
 
 export const routes: Routes = [
@@ -25,7 +23,21 @@ export const routes: Routes = [
             {
                 path: 'my-project',
                 loadComponent: () => import('./features/my-project/my-project.component')
-                .then(m => m.MyProjectComponent), data: {title: 'Mis proyectos'}
+                .then(m => m.MyProjectComponent), data: {title: 'Mis proyectos'},
+                    children: [
+                        {
+                            path: 'proyecto/:id',               
+                            loadComponent: () =>
+                            import('./features/my-project/project-detail.component/project-detail.component')
+                                .then(m => m.ProjectDetailComponent),
+                            data: { title: 'Detalle del Proyecto' }
+                        },
+                        {
+                            path: '',                    
+                            redirectTo: '',
+                            pathMatch: 'full'
+                        }
+                    ]
             },
 
             {
