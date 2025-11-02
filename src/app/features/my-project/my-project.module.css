@@ -4,24 +4,6 @@
   height: 100%;
 }
 
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 30px;
-  color: #2E7D32;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.breadcrumb-arrow {
-  color: #2E7D32;
-}
-
-.breadcrumb-text {
-  color: #2E7D32;
-}
-
 .section-header {
   display: flex;
   justify-content: space-between;
