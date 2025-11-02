@@ -9,28 +9,36 @@ aside {
   padding: 10px;
   border: 2px solid #E2E8F0;
   border-radius: 8px;
+  width: auto;  
+
 }
 
 aside button {
   background-color: #6a994e;
   border: 1px solid #6a994e;
   border-radius: 8px;
-  width: 45px;            
   height: 45px;
   display: flex;             
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.2s ease;
+
+  width: 45px;
 }
 
 aside button:hover {
-  background-color: #5c8301;
+
+  background-color: rgba(39, 149, 6, 0.753);
 }
 
 aside button.icon-selected {
   background-color: #2E7D32;
   border-color: #2E7D32;
+
+  &:hover{
+    background-color: #1da524e4;
+  }
 }
 
 aside button svg,
@@ -45,8 +53,44 @@ aside button img {
   flex-direction: column;
   gap: 8px;
   align-items: center;
+
 }
 
 .icon-sidebar {
   color: #fff;
+}
+
+.name-option{
+
+  display: none;
+
+  color: #fff;
+  font-weight: 600;
+
+  text-align: start;
+  margin-left: 10px;
+
+
+}
+
+aside:hover{
+  width: 180px;
+  transition: all 1.3s ease;
+
+
+  & .name-option{
+    display: block;
+    width: 110px;
+  }
+
+  & .settings-options{
+    width: 100%;
+
+
+  }
+
+  & button{
+    width: auto;
+    align-items: center;
+  }
 }

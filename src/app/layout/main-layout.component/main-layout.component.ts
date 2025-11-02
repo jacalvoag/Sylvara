@@ -14,7 +14,6 @@ import { Observable, Subscription, filter } from 'rxjs';
   styleUrls: ['./main-layout.component.css']
 })
 export class MainLayoutComponent implements OnInit, OnDestroy {
-  collapsed$: Observable<boolean>;
   currentPage: string = 'Home';
   private routerSub!: Subscription;
 
@@ -22,9 +21,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
     private sidebarService: SidebarService,
     private router: Router,
     private route: ActivatedRoute
-  ) {
-    this.collapsed$ = this.sidebarService.collapsed$;
-  }
+  ) {}
 
   ngOnInit(): void {
     this.updatePageTitle();
