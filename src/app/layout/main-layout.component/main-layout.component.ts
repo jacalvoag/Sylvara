@@ -3,7 +3,6 @@ import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from '../sidebar.component/sidebar.component';
 import { HeaderComponent } from '../header.component/header.component';
-import { SidebarService } from '../../core/services/sidebar.service';
 import { Observable, Subscription, filter } from 'rxjs';
 
 @Component({
@@ -18,7 +17,6 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
   private routerSub!: Subscription;
 
   constructor(
-    private sidebarService: SidebarService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
