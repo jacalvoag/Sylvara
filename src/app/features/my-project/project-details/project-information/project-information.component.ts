@@ -1,53 +1,41 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+// project-detail.component.ts
+import { Component, OnInit, OnDestroy, signal } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
 import { Project } from '../../../../core/models/project.model';
 import { ProjectService } from '../../../../core/services/project.service';
 
 @Component({
   selector: 'app-project-information',
-  imports: [],
   templateUrl: './project-information.component.html',
   styleUrl: './project-information.component.css',
+  standalone: true,
+  imports: [] 
 })
-export class ProjectDetailComponent {
-
-  projectId: number | null = null;
+export class ProjectDetailComponent implements OnInit, OnDestroy {
+  info = signal<Project | null>(null);
   private paramSub!: Subscription;
-  info: Project | null = null;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private projectService: ProjectService,
+    private projectService: ProjectService
   ) {}
 
   ngOnInit(): void {
-    // ESCUCHA CAMBIOS EN LOS PARÁMETROS
     this.paramSub = this.route.paramMap.subscribe(params => {
-      this.projectId = +params.get('id')! || null;
-      console.log('Proyecto actual:', this.projectId);
-
+      const id = +params.get('id')!;
+      if (id) {
+        this.loadInfo(id);
+      }
     });
-    this.loadInfo()
-    
-
-
   }
 
-  loadInfo(): void{
-      this.projectService.getProjectById(this.projectId!).subscribe({
-        next: (data) =>{
-          this.info = data!;
-      },
-      error: (err) =>{
-        console.log('gg')
-      }
-    }
-
-    )
-    
+  loadInfo(id: number): void {
+    this.projectService.getProjectById(id).subscribe({
+      next: (data) => this.info.set(data || null),
+      error: () => this.info.set(null)
+    });
   }
 
   goBack(): void {
@@ -55,6 +43,6 @@ export class ProjectDetailComponent {
   }
 
   ngOnDestroy(): void {
-    this.paramSub.unsubscribe(); // Evita memory leak
+    this.paramSub.unsubscribe();
   }
 }

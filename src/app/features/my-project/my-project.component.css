@@ -28,32 +28,6 @@
 }
 
 
-
-.base-card--terminated{
-
-  background-color: #F0EAD2;
-
-  border-color: #7F4F24;
-  
-
-  & h3{
-
-    color: #7F4F24;
-    font-size: 1.3rem;
-    margin-bottom: 3px;
-
-  }
-
-  & p {
-
-    color: #936639;
-    margin-top: 5px;
-
-  }
-  
-
-}
-
 .info-container{
 
   display: flex;
