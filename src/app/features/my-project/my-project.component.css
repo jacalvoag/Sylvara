@@ -11,9 +11,7 @@
   margin-top: 20px;
 }
 
-.svg-button{
-  vertical-align: middle;  
-}
+
 
 .loading-container{
 
@@ -75,36 +73,6 @@
 
 }
 
-.badge {
-
-  background-color: #C8E6C9;
-  border-radius: 30px;
-  color: #1B5E20;
-  padding: 2px 10px;
-  font-weight: 400;
-  text-align: end;
-}
-
-.badge--terminated{
-
-  background-color: #E6CCB2;
-  color: #582F0E;
-
-}
-
-.section-header{
-
-  display: flex;
-  justify-content: space-between;
-
-
-}
-
-.section-title{
-
-  margin: 0px;
-
-}
 
 .button-option{
   display: flex;
