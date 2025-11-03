@@ -28,7 +28,7 @@ export const routes: Routes = [
                         {
                             path: 'proyecto/:id',               
                             loadComponent: () =>
-                            import('./features/my-project/project-detail.component/project-detail.component')
+                            import('./features/my-project/project-details/project-information/project-information.component')
                                 .then(m => m.ProjectDetailComponent),
                             data: { title: 'Detalle del Proyecto' }
                         },
