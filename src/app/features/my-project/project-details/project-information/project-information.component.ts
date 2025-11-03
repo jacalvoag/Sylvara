@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
-import { Project } from '../../../core/models/project.model';
-import { ProjectService } from '../../../core/services/project.service';
+import { Project } from '../../../../core/models/project.model';
+import { ProjectService } from '../../../../core/services/project.service';
 
 @Component({
-  selector: 'app-project-detail.component',
+  selector: 'app-project-information',
   imports: [],
-  templateUrl: './project-detail.component.html',
-  styleUrl: './project-detail.component.css',
+  templateUrl: './project-information.component.html',
+  styleUrl: './project-information.component.css',
 })
 export class ProjectDetailComponent {
 
