@@ -10,10 +10,10 @@ export class ProjectService {
 
 
     private mockProjects: Project[] = [
-        { id: 1, name: 'Maíz Primavera 2025', zones: 12, status: 'Activo' },
-        { id: 2, name: 'Tomate Invernadero', zones: 8, status: 'Terminado' },
-        { id: 3, name: 'Frijol Secano 2024', zones: 20, status: 'Activo' },
-        { id: 4, name: 'Café Altura', zones: 15, status: 'Activo' },
+        { id: 1, name: 'Rancho Cuba Libre', zones: 12, status: 'Activo', description: 'Proyecto de la materia de Análisis de Especies de 4 semestre. Predio de aproximadamente 1680 metros cuadrados divididos en 4 zonas de estudio.' },
+        { id: 2, name: 'Tomate Invernadero', zones: 8, status: 'Terminado', description: 'Proyecto de la materia de Análisis de Especies de 4 semestre. Predio de aproximadamente 1680 metros cuadrados divididos en 4 zonas de estudio.' },
+        { id: 3, name: 'Frijol Secano 2024', zones: 20, status: 'Activo', description: 'Proyecto de la materia de Análisis de Especies de 4 semestre. Predio de aproximadamente 1680 metros cuadrados divididos en 4 zonas de estudio.' },
+        { id: 4, name: 'Café Altura', zones: 15, status: 'Activo', description: 'Proyecto de la materia de Análisis de Especies de 4 semestre. Predio de aproximadamente 1680 metros cuadrados divididos en 4 zonas de estudio.' },
     ];
 
     getProjects(): Observable<Project[]> {

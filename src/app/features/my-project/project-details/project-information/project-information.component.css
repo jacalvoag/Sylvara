@@ -1,0 +1,52 @@
+.buttons-header{
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+
+}
+
+.info-card{
+    background-color: #E8F5E8;
+    border-radius: 12px;
+    border: solid #558B5F;
+    border-width: 4px;
+    margin: 30px 1px;
+    padding: 1rem ;
+
+}
+
+.first-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.3rem;
+
+
+    & h3{
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        
+
+    }
+    
+
+
+}
+
+.info-project{
+
+    display: flex;
+    padding: 0 1.3rem ;
+
+
+    & p{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+
+}

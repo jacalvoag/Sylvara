@@ -3,4 +3,5 @@ export interface Project {
     name: string;
     zones: number;
     status: 'Activo' | 'Terminado';
+    description: string;
 }
