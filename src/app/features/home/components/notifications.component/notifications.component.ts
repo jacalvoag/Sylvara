@@ -4,7 +4,7 @@ import { Notification } from '../../../../core/models/notification.model';
 import { NotificationService } from '../../../../core/services/notification.service';
 
 @Component({
-  selector: 'app-notifications.component',
+  selector: 'app-notifications',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './notifications.component.html',

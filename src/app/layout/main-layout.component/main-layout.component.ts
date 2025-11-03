@@ -31,13 +31,19 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
       });
   }
 
-  private updatePageTitle(): void {
-    let child = this.route;
-    while (child.firstChild) {
-      child = child.firstChild;
+private updatePageTitle(): void {
+  let route = this.route;
+  const titles: string[] = [];
+
+  while (route.firstChild) {
+    route = route.firstChild;
+    if (route.snapshot.data['title']) {
+      titles.push(route.snapshot.data['title']);
     }
-    this.currentPage = child.snapshot.data['title'] || 'Home';
   }
+
+  this.currentPage = titles.join(' > ') || 'Home';
+}
 
   ngOnDestroy(): void {
     this.routerSub?.unsubscribe();
