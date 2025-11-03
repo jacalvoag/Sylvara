@@ -16,7 +16,8 @@ export class ProjectService {
                 {
                     idZone: 1,
                     zoneName: 'Parcela El Roble',
-                    zoneNumber: 1
+                    zoneNumber: 1,
+                    squareFootage: '420m2'
                 }
             ]},
         { id: 2, name: 'Tomate Invernadero', zones: 8, status: 'Terminado', 
@@ -25,12 +26,16 @@ export class ProjectService {
                 {
                     idZone: 2,
                     zoneName: 'Parcela El Roble',
-                    zoneNumber: 2
+                    zoneNumber: 2,
+                    squareFootage: '420m2'
+
                 },
                 {
-                    idZone: 2,
+                    idZone: 3,
                     zoneName: 'Parcela El Roble',
-                    zoneNumber: 2
+                    zoneNumber: 2,
+                    squareFootage: '420m2'
+
                 }
                 
             ] },
@@ -38,9 +43,11 @@ export class ProjectService {
             description: 'Proyecto de la materia de Análisis de Especies de 4 semestre. Predio de aproximadamente 1680 metros cuadrados divididos en 4 zonas de estudio.', 
             zone:[
                 {
-                    idZone: 2,
+                    idZone: 4,
                     zoneName: 'Parcela El Roble',
-                    zoneNumber: 2
+                    zoneNumber: 2,
+                    squareFootage: '420m2'
+
                 }
                 
             ] },
@@ -48,9 +55,11 @@ export class ProjectService {
             description: 'Proyecto de la materia de Análisis de Especies de 4 semestre. Predio de aproximadamente 1680 metros cuadrados divididos en 4 zonas de estudio.', 
             zone:[
                 {
-                    idZone: 2,
+                    idZone: 5,
                     zoneName: 'Parcela El Roble',
-                    zoneNumber: 2
+                    zoneNumber: 2,
+                    squareFootage: '420m2'
+
                 }
                 
             ] },
