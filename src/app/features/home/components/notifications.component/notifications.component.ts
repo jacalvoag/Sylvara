@@ -9,7 +9,7 @@ interface Notification {
 }
 
 @Component({
-  selector: 'app-notifications.component',
+  selector: 'app-notifications',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './notifications.component.html',

@@ -11,8 +11,8 @@ export class ProjectService {
 
     private mockProjects: Project[] = [
         { id: 1, name: 'Maíz Primavera 2025', zones: 12, status: 'Activo' },
-        { id: 2, name: 'Tomate Invernadero', zones: 8, status: 'Activo' },
-        { id: 3, name: 'Frijol Secano 2024', zones: 20, status: 'Terminado' },
+        { id: 2, name: 'Tomate Invernadero', zones: 8, status: 'Terminado' },
+        { id: 3, name: 'Frijol Secano 2024', zones: 20, status: 'Activo' },
         { id: 4, name: 'Café Altura', zones: 15, status: 'Activo' },
     ];
 
