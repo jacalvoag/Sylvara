@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface Notification {
-  id: number;
-  type: 'collaboration' | 'report' | 'alert';
-  message: string;
-  date: Date;
-}
+import { Notification } from '../../../../core/models/notification.model';
+import { NotificationService } from '../../../../core/services/notification.service';
 
 @Component({
   selector: 'app-notifications.component',
@@ -19,37 +14,27 @@ export class NotificationsComponent implements OnInit {
   notifications: Notification[] = [];
   loading = true;
 
+  // Aquí se inyecta el servicio
+  constructor(private notificationService: NotificationService) {}
+
   ngOnInit(): void {
     this.loadNotifications();
   }
 
+  // El componente SOLO se suscribe al servicio
   loadNotifications(): void {
-    // Aquí llamaremos la llamada real a la API
-    // Por ahora puse datos simulados de notificaciones
-    setTimeout(() => {
-      this.notifications = [
-        {
-          id: 1,
-          type: 'collaboration',
-          message: 'Fuiste agregado al proyecto colaborativo "Estudio Sierra Verde".',
-          date: new Date()
-        },
-        {
-          id: 2,
-          type: 'report',
-          message: 'Se generó el reporte de biodiversidad del predio "El Robledal".',
-          date: new Date()
-        },
-        {
-          id: 3,
-          type: 'collaboration',
-          message: 'Fuiste agregado al proyecto colaborativo "Estudio Sierra Verde".',
-          date: new Date()
-        }
-      ];
-      this.loading = false;
-    }, 500);
+    this.notificationService.getNotifications().subscribe({
+      next: (data) => {
+        this.notifications = data;
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Error cargando notificaciones', err);
+        this.loading = false;
+      }
+    });
   }
+
 
   getIcon(type: string): string {
     switch(type) {
