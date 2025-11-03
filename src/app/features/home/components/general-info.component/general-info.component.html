@@ -1,1 +1,34 @@
-<p>general-info.component works!</p>
+<div class="general-info-card">
+  <div class="card-header">
+    <span class="material-icons icon-header">bar_chart</span>
+    <h2>Resumen general</h2>
+  </div>
+
+  @if (loading) {
+    <div class="loading-state">
+      <p>Cargando estadísticas...</p>
+    </div>
+  } @else {
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>{{ stats.totalProjects }}</h3>
+        <p>Total de Proyectos registradas</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>{{ stats.projectsThisMonth }}</h3>
+        <p>Proyectos este mes</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>{{ stats.totalAnalysis }}</h3>
+        <p>Total de Análisis</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>{{ stats.analysisThisMonth }}</h3>
+        <p>Proyectos este mes</p>
+      </div>
+    </div>
+  }
+</div>
