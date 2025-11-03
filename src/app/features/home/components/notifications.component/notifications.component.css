@@ -20,7 +20,8 @@
   gap: 12px;
 }
 
-.header-left svg {
+.icon-header {
+  font-size: 32px;
   color: #2E7D32;
 }
 
@@ -89,8 +90,9 @@
   flex-shrink: 0;
 }
 
-.notification-icon svg {
+.notification-icon .material-icons {
   color: #fff;
+  font-size: 20px;
 }
 
 .notification-item p {
