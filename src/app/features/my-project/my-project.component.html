@@ -24,7 +24,6 @@
     </div>
   } @else {
 
-    <!-- MOSTRAR GRID SOLO SI showGrid === true -->
     @if (showGrid && textError === '') {
       <div class="projects-grid">
         @for (project of projects; track project.id) {
@@ -103,7 +102,6 @@
       </div>
     }
 
-    <!-- SIEMPRE MOSTRAR EL DETALLE (si existe) -->
     <router-outlet></router-outlet>
 
   }
