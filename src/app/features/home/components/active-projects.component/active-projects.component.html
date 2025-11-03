@@ -1,9 +1,7 @@
 <div class="active-projects-card">
   <div class="card-header">
     <div class="header-title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-      </svg>
+      <span class="material-icons icon-header">check_circle</span>
       <h2>Proyectos Activos</h2>
     </div>
     <span class="count-badge">{{ activeCount }}</span>
@@ -18,9 +16,7 @@
       @for (project of activeProjects; track project.id) {
         <div class="project-item">
           <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-            </svg>
+            <span class="material-icons">folder</span>
           </div>
           <div class="project-info">
             <h3>{{ project.name }}</h3>
