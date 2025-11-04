@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
-import { Notification } from '../../../../core/models/notification.model';
-import { NotificationService } from '../../../../core/services/notification.service';
+import { Router } from '@angular/router';
+import { Notification } from '../../../core/models/notification.model';
+import { NotificationService } from '../../../core/services/notification.service';
 
 @Component({
-  selector: 'app-notifications',
+  selector: 'app-notifications-page',
   standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './notifications.component.html',
-  styleUrl: './notifications.component.css',
+  imports: [CommonModule],
+  templateUrl: './notifications-page.component.html',
+  styleUrl: './notifications-page.component.css'
 })
-export class NotificationsComponent implements OnInit {
+export class NotificationsPageComponent implements OnInit {
   notifications: Notification[] = [];
   loading = true;
 
-  constructor(private notificationService: NotificationService) {}
+  constructor(
+    private notificationService: NotificationService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadNotifications();
@@ -34,7 +37,6 @@ export class NotificationsComponent implements OnInit {
     });
   }
 
- 
   getIconName(type: string): string {
     switch(type) {
       case 'collaboration':
@@ -46,5 +48,17 @@ export class NotificationsComponent implements OnInit {
       default:
         return 'info';
     }
+  }
+
+  goBack(): void {
+    this.router.navigate(['/home']);
+  }
+
+  markAsRead(id: number): void {
+    console.log('Marcar como leída:', id);
+  }
+
+  deleteNotification(id: number): void {
+    this.notifications = this.notifications.filter(n => n.id !== id);
   }
 }

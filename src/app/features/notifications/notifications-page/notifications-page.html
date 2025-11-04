@@ -1,0 +1,54 @@
+<div class="notifications-page">
+  <div class="page-header">
+    <button class="back-button" (click)="goBack()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+      </svg>
+      Volver
+    </button>
+    <h1>Todas las Notificaciones</h1>
+  </div>
+
+  @if (loading) {
+    <div class="loading-state">
+      <p>Cargando notificaciones...</p>
+    </div>
+  } @else {
+    @if (notifications.length === 0) {
+      <div class="empty-state">
+        <svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" fill="currentColor">
+          <path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/>
+        </svg>
+        <p>No tienes notificaciones</p>
+      </div>
+    } @else {
+      <div class="notifications-container">
+        @for (notification of notifications; track notification.id) {
+          <div class="notification-card" 
+               [class.notification-collaboration]="notification.type === 'collaboration'"
+               [class.notification-report]="notification.type === 'report'"
+               [class.notification-alert]="notification.type === 'alert'">
+            
+            <div class="notification-icon">
+              <span class="material-icons">{{ getIconName(notification.type) }}</span>
+            </div>
+
+            <div class="notification-content">
+              <p class="notification-message">{{ notification.message }}</p>
+              <span class="notification-date">{{ notification.date | date:'dd/MM/yyyy HH:mm' }}</span>
+            </div>
+
+            <div class="notification-actions">
+              <button class="action-button" (click)="markAsRead(notification.id)" title="Marcar como leída">
+                <span class="material-icons">done</span>
+              </button>
+              <button class="action-button action-delete" (click)="deleteNotification(notification.id)" title="Eliminar">
+                <span class="material-icons">delete</span>
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  }
+</div>
