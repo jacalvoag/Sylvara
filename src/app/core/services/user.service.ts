@@ -11,14 +11,12 @@ export class UserService {
         id: 1,
         fullName: 'María',
         bio: 'González',
-        email: 'Rodriguez',
-        phone: '28',
-        location: 'México',
+        email: 'ariaria@gmail.com',
+        phone: '961232323',
+        location: 'La triste suchiapa',
         photoUrl: undefined
     };
-
     // Este método simula una llamada a la API
-    // Para conectar con API real, cambias por: this.http.get<User>(`${apiUrl}/user`)
     getUserProfile(): Observable<User> {
         return of(this.mockUser).pipe(delay(300));
     }
