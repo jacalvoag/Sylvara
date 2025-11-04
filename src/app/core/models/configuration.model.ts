@@ -7,4 +7,5 @@ export interface Configuration {
     email: string;
     location: string;
     photoProfile: string;
+    deletePhotoProfile: boolean;
 }
