@@ -46,8 +46,13 @@ app-root {
     border: 0.5px solid #1B5E20;
     padding: 4px 13px;
     border-radius: 30px;
+    cursor: pointer;
 
     color: #1B5E20;
+
+    &:hover{
+        background-color: #9de39edb;
+    }
 }
 
 .button-modal-action{
