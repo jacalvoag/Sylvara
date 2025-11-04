@@ -17,7 +17,20 @@ export class ProjectService {
                     idZone: 1,
                     zoneName: 'Parcela El Roble',
                     zoneNumber: 1,
-                    squareFootage: '420m2'
+                    squareFootage: '420m2',
+                    biodiversityAnalysis:{
+                        shannonWiener: 1.89,
+                        simpson: 0.47,
+                        margaleft: 6.12,
+                        pielou: 3.78
+                    },
+                    recordedSpecies: [{
+                        speciesName: 'Mango',
+                        samplingUnit: '',
+                        functionalType: '',
+                        numberOfIndividuals: '',
+                        heightOrStratum: '',
+                    }]
                 }
             ]},
         { id: 2, name: 'Tomate Invernadero', zones: 8, status: 'Terminado', 
@@ -27,14 +40,40 @@ export class ProjectService {
                     idZone: 2,
                     zoneName: 'Parcela El Roble',
                     zoneNumber: 2,
-                    squareFootage: '420m2'
+                    squareFootage: '420m2',
+                    biodiversityAnalysis:{
+                        shannonWiener: 1.89,
+                        simpson: 0.47,
+                        margaleft: 6.12,
+                        pielou: 3.78
+                    },
+                    recordedSpecies: [{
+                        speciesName: 'Mango',
+                        samplingUnit: '',
+                        functionalType: '',
+                        numberOfIndividuals: '',
+                        heightOrStratum: '',
+                    }]
 
                 },
                 {
                     idZone: 3,
                     zoneName: 'Parcela El Roble',
                     zoneNumber: 2,
-                    squareFootage: '420m2'
+                    squareFootage: '420m2',
+                    biodiversityAnalysis:{
+                        shannonWiener: 1.89,
+                        simpson: 0.47,
+                        margaleft: 6.12,
+                        pielou: 3.78
+                    },
+                    recordedSpecies: [{
+                        speciesName: 'Mango',
+                        samplingUnit: '',
+                        functionalType: '',
+                        numberOfIndividuals: '',
+                        heightOrStratum: '',
+                    }]
 
                 }
                 
@@ -46,19 +85,45 @@ export class ProjectService {
                     idZone: 4,
                     zoneName: 'Parcela El Roble',
                     zoneNumber: 2,
-                    squareFootage: '420m2'
+                    squareFootage: '420m2',
+                    biodiversityAnalysis:{
+                        shannonWiener: 1.89,
+                        simpson: 0.47,
+                        margaleft: 6.12,
+                        pielou: 3.78
+                    },
+                    recordedSpecies: [{
+                        speciesName: 'Mango',
+                        samplingUnit: '',
+                        functionalType: '',
+                        numberOfIndividuals: '',
+                        heightOrStratum: '',
+                    }]
 
                 }
                 
             ] },
-        { id: 4, name: 'Café Altura', zones: 15, status: 'Activo', 
+        { id: 5, name: 'Café Altura', zones: 15, status: 'Activo', 
             description: 'Proyecto de la materia de Análisis de Especies de 4 semestre. Predio de aproximadamente 1680 metros cuadrados divididos en 4 zonas de estudio.', 
             zone:[
                 {
                     idZone: 5,
                     zoneName: 'Parcela El Roble',
                     zoneNumber: 2,
-                    squareFootage: '420m2'
+                    squareFootage: '420m2',
+                    biodiversityAnalysis:{
+                        shannonWiener: 1.89,
+                        simpson: 0.47,
+                        margaleft: 6.12,
+                        pielou: 3.78
+                    },
+                    recordedSpecies: [{
+                        speciesName: 'Mango',
+                        samplingUnit: '',
+                        functionalType: '',
+                        numberOfIndividuals: '',
+                        heightOrStratum: '',
+                    }]
 
                 }
                 

@@ -21,7 +21,7 @@ export const routes: Routes = [
             },
 
             {
-                path: 'my-project',
+                path: 'myprojects',
                 loadComponent: () => import('./features/my-project/my-project.component')
                 .then(m => m.MyProjectComponent), data: {title: 'Mis proyectos'},
                     children: [
@@ -30,7 +30,16 @@ export const routes: Routes = [
                             loadComponent: () =>
                             import('./features/my-project/project-details/project-information/project-information.component')
                                 .then(m => m.ProjectDetailComponent),
-                            data: { title: 'Detalle del Proyecto' }
+                            data: { title: 'Detalle del Proyecto' },
+                            children: [
+                                {
+                                    path: 'zone/:idZone',
+                                    loadComponent: () =>
+                                    import('./features/my-project/project-details/study-zones.component/study-zones.component')
+                                        .then(m => m.StudyZonesComponent),
+                                        data: {title: 'Zona de estudio'}
+                                }
+                            ]
                         },
                         {
                             path: '',                    
