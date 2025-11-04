@@ -6,4 +6,11 @@ export interface User {
     phone: string;
     location: string;
     photoUrl?: string;
+    age: number;
+    
+}
+
+export interface PasswordChange {
+    newPassword: string;
+    confirmPassword: string;
 }

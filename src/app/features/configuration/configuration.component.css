@@ -55,7 +55,7 @@
   flex-direction: column;
   gap: 10px;
   min-width: 250px;
-  background-color: #e8f5e8;
+  background-color: #E8F5E8;
   padding: 20px;
   border-radius: 12px;
   height: fit-content;
@@ -145,31 +145,6 @@
   width: 100%;
 }
 
-.button-photo {
-  background-color: #2E7D32;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-}
-
-.button-photo:hover {
-  background-color: #1B5E20;
-}
-
-.button-photo--delete {
-  background-color: #2E7D32;
-}
-
-.button-photo--delete:hover {
-  background-color: #1B5E20;
-}
-
 /* Formulario */
 .profile-form {
   flex: 1;
@@ -206,16 +181,89 @@
 }
 
 /* Ajustes de cuenta */
-.account-settings {
-  padding: 40px;
-  text-align: center;
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
-.settings-placeholder {
-  color: #558B5F;
-  font-size: 1.1rem;
-  font-style: italic;
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  background-color: #F8FBF8;
+  border-radius: 12px;
+  border: 1px solid #E8F5E8;
 }
+
+.form-section--danger {
+  background-color: #FFF5F5;
+  border-color: #FFE0E0;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+.section-subtitle--danger {
+  color: #AE0000;
+}
+
+.password-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.email-field {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.form-input--email {
+  flex: 1;
+}
+
+.form-input--age {
+  max-width: 200px;
+}
+
+.button-change {
+  background-color: transparent;
+  color: #2E7D32;
+  border: 1px solid #2E7D32;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.button-change:hover {
+  background-color: #2E7D32;
+  color: white;
+}
+
+.danger-text {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.danger-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
 
 /* Responsive */
 @media (max-width: 1024px) {
