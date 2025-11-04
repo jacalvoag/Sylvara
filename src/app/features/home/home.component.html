@@ -1,13 +1,17 @@
 <div class="home-container">
   <div class="home-layout">
-    <!-- Columna que es de Proyectos Activos -->
+    <!-- Columna izquierda: Proyectos Activos -->
     <section class="left-section">
       <app-active-projects [projects]="projects" [loading]="loading"></app-active-projects>
     </section>
 
-    <!-- Columna que es de Resumen General y Notificaciones -->
+    <!-- Columna derecha: Resumen General -->
     <section class="right-section">
       <app-general-info></app-general-info>
+    </section>
+
+    <!-- Notificaciones - Abarca todo el ancho -->
+    <section class="notifications-full-width">
       <app-notifications></app-notifications>
     </section>
   </div>
