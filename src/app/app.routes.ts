@@ -54,7 +54,7 @@ export const routes: Routes = [
 
             {
                 path: 'configuration',
-                loadComponent: () => import('./features/configuration/configuration.module')
+                loadComponent: () => import('./features/configuration/configuration.component')
                 .then(m => m.ConfigurationModule), data: {title: 'Configuración'}
             },
 
