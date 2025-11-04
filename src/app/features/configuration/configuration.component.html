@@ -2,7 +2,7 @@
   
   @if (showSuccessMessage()) {
     <div class="success-message">
-      ✓ Cambios guardados exitosamente
+      Cambios guardados exitosamente
     </div>
   }
 
@@ -12,7 +12,6 @@
     </div>
   } @else {
     <div class="configuration-layout">
-      <!-- Sidebar de navegación -->
       <aside class="config-sidebar">
         <button 
           class="sidebar-item" 
@@ -39,7 +38,6 @@
 
       <!-- Contenido principal -->
       <main class="config-content">
-        
         @if (activeSection() === 'perfil') {
           <div class="content-header">
             <h2 class="content-title">Perfil</h2>
