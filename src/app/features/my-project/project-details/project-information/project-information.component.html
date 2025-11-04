@@ -7,10 +7,11 @@
                 <h2 class="section-title">Todos los proyectos</h2>
                 
                 <div class="buttons-header">
-                    <button routerLink="./biodiversity-analysis.component" class="button-light">
+                    <button [routerLink]="['proyecto-analisis']" class="button-light">
                     <svg class="svg-button" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#000000">
                         <path fill="currentColor" d="M80-120v-80h800v80H80Zm40-120v-280h120v280H120Zm200 0v-480h120v480H320Zm200 0v-360h120v360H520Zm200 0v-600h120v600H720Z"/>
                     </svg>
+                    
                     Analisis de biodiversidad
                     </button>
 
@@ -154,7 +155,6 @@
 
     }
 
-    <router-outlet></router-outlet>
 
 </div>
 

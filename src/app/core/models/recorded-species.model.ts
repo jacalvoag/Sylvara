@@ -1,5 +1,5 @@
 export interface RercordedSpecies{
-
+    speciesId: number,
     speciesName: string,
     samplingUnit: string,
     functionalType: string,

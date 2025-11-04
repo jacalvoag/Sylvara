@@ -9,8 +9,9 @@ aside {
   padding: 10px;
   border: 2px solid #E2E8F0;
   border-radius: 8px;
-  width: auto;  
-
+  width: 45px;
+  overflow: hidden;  
+  
 }
 
 aside button {
@@ -62,8 +63,6 @@ aside button img {
 
 .name-option{
 
-  display: none;
-
   color: #fff;
   font-weight: 600;
 
@@ -79,7 +78,6 @@ aside:hover{
 
 
   & .name-option{
-    display: block;
     width: 110px;
   }
 
