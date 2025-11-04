@@ -58,19 +58,19 @@ export const routes: Routes = [
 
         {
             path: 'team-projects',
-            loadChildren: () => import('./features/team-projects/team-projects.module')
+            loadComponent: () => import('./features/team-projects/team-projects.module')
             .then(m => m.TeamProjectsModule),
             data: { title: 'Colaboraciones' }
         },
         {
             path: 'reports',
-            loadChildren: () => import('./features/reports/reports.module')
+            loadComponent: () => import('./features/reports/reports.module')
             .then(m => m.ReportsModule),
             data: { title: 'Reportes' }
         },
         {
             path: 'configuration',
-            loadChildren: () => import('./features/configuration/configuration.module')
+            loadComponent: () => import('./features/configuration/configuration.component')
             .then(m => m.ConfigurationModule),
             data: { title: 'Configuración' }
         },
