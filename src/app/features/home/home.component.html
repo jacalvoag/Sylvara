@@ -1,14 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Sylvara</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
+<div class="home-container">
+  <div class="home-layout">
+    <!-- Columna que es de Proyectos Activos -->
+    <section class="left-section">
+      <app-active-projects [projects]="projects" [loading]="loading"></app-active-projects>
+    </section>
+
+    <!-- Columna que es de Resumen General y Notificaciones -->
+    <section class="right-section">
+      <app-general-info></app-general-info>
+      <app-notifications></app-notifications>
+    </section>
+  </div>
+</div>
