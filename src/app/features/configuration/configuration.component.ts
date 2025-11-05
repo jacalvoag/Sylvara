@@ -16,6 +16,7 @@ export class ConfigurationModule implements OnInit {
   showSuccessMessage = signal(false);
   loading = signal(true);
   showDeleteModal = signal(false);
+  isEditMode = signal(false); 
   profileForm: FormGroup;
   accountForm: FormGroup;
 
@@ -38,6 +39,7 @@ export class ConfigurationModule implements OnInit {
 
   ngOnInit(): void {
     this.loadUserProfile();
+    this.disableAllForms(); 
   }
 
   loadUserProfile(): void {
@@ -67,6 +69,27 @@ export class ConfigurationModule implements OnInit {
 
   setActiveSection(section: 'perfil' | 'ajuste'): void {
     this.activeSection.set(section);
+    this.isEditMode.set(false); 
+    this.disableAllForms();
+  }
+
+  toggleEditMode(): void {
+    this.isEditMode.set(!this.isEditMode());
+    if (this.isEditMode()) {
+      this.enableAllForms();
+    } else {
+      this.disableAllForms();
+    }
+  }
+
+  disableAllForms(): void {
+    this.profileForm.disable();
+    this.accountForm.disable();
+  }
+
+  enableAllForms(): void {
+    this.profileForm.enable();
+    this.accountForm.enable();
   }
 
   onSaveChanges(): void {
@@ -81,6 +104,8 @@ export class ConfigurationModule implements OnInit {
           console.log('Cambios guardados:', user);
           this.showSuccessMessage.set(true);
           setTimeout(() => this.showSuccessMessage.set(false), 3000);
+          this.isEditMode.set(false);
+          this.disableAllForms();
         },
         error: (err) => {
           console.error('Error guardando cambios', err);
@@ -138,6 +163,8 @@ export class ConfigurationModule implements OnInit {
           console.log('Configuración guardada');
           this.showSuccessMessage.set(true);
           setTimeout(() => this.showSuccessMessage.set(false), 3000);
+          this.isEditMode.set(false);
+          this.disableAllForms();
         },
         error: (err) => {
           console.error('Error guardando configuración', err);
