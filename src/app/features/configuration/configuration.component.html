@@ -41,19 +41,9 @@
         @if (activeSection() === 'perfil') {
           <div class="content-header">
             <h2 class="content-title">Perfil</h2>
-            <div style="display: flex; gap: 10px;">
-              <button 
-                class="button-modal-action button-modal-action--elverde" 
-                (click)="toggleEditMode()">
-                {{ isEditMode() ? 'Cancelar' : 'Editar' }}
-              </button>
-              <button 
-                class="button-modal-action button-modal-action--elverde" 
-                (click)="onSaveChanges()"
-                [disabled]="!isEditMode()">
-                Guardar Cambios
-              </button>
-            </div>
+            <button class="button-modal-action button-modal-action--elverde" (click)="onSaveChanges()">
+              Guardar Cambios
+            </button>
           </div>
 
           <div class="profile-section">
@@ -66,16 +56,10 @@
                 </svg>
               </div>
               <div class="photo-actions">
-                <button 
-                  class="button-modal-action button-modal-action--elverde" 
-                  (click)="onChangePhoto()"
-                  [disabled]="!isEditMode()">
+                <button class="button-modal-action button-modal-action--elverde" (click)="onChangePhoto()">
                   Cambiar foto
                 </button>
-                <button 
-                  class="button-modal-action button-modal-action--red" 
-                  (click)="onDeletePhoto()"
-                  [disabled]="!isEditMode()">
+                <button class="button-modal-action button-modal-action--red" (click)="onDeletePhoto()">
                   Eliminar foto
                 </button>
               </div>
@@ -134,19 +118,9 @@
         @if (activeSection() === 'ajuste') {
           <div class="content-header">
             <h2 class="content-title">Ajustes de la cuenta</h2>
-            <div style="display: flex; gap: 10px;">
-              <button 
-                class="button-modal-action button-modal-action--elverde" 
-                (click)="toggleEditMode()">
-                {{ isEditMode() ? 'Cancelar' : 'Editar' }}
-              </button>
-              <button 
-                class="button-modal-action button-modal-action--elverde" 
-                (click)="onSaveAccountSettings()"
-                [disabled]="!isEditMode()">
-                Guardar Cambios
-              </button>
-            </div>
+            <button class="button-modal-action button-modal-action--elverde" (click)="onSaveAccountSettings()">
+              Guardar Cambios
+            </button>
           </div>
 
           <form [formGroup]="accountForm" class="account-form">
@@ -188,8 +162,7 @@
                 <button 
                   type="button" 
                   class="button-change" 
-                  (click)="onChangeEmail()"
-                  [disabled]="!isEditMode()">
+                  (click)="onChangeEmail()">
                   Cambiar
                 </button>
               </div>
