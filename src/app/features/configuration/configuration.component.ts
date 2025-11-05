@@ -98,7 +98,6 @@ export class ConfigurationModule implements OnInit {
     console.log('Eliminar foto');
   }
 
-  // ✅ Métodos para comunicación con el componente hijo
   onEditModeChange(newMode: boolean): void {
     this.isEditMode.set(newMode);
   }
