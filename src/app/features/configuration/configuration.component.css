@@ -180,6 +180,12 @@
   background-color: white;
 }
 
+.form-input:disabled {
+  background-color: #F1F5F9;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 /* Ajustes de cuenta */
 .account-form {
   display: flex;
@@ -249,6 +255,16 @@
 .button-change:hover {
   background-color: #2E7D32;
   color: white;
+}
+
+.button-change:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-change:disabled:hover {
+  background-color: transparent !important;
+  color: #2E7D32 !important;
 }
 
 .danger-text {
