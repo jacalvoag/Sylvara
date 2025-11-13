@@ -15,6 +15,12 @@ export const routes: Routes = [
         .then(m => m.RegisterComponent),
         data: { title: 'Registro' }
     },
+    {
+        path: 'landing',
+        loadComponent:() => import('./auth/landing/landing.component')
+        .then(m => m.Landing),
+        data: { title: 'Bienvenido a nuestra landing page' }
+    },
 
     {
         path: '',
